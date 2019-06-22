@@ -1,0 +1,29 @@
+//在这里引入config.gradle
+apply from:"config.gradle"
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.2'
+        //避免butterKnife在library中使用出现id冲突
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.1.0'
+        //添加jitpack发布相关配置
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
