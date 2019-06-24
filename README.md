@@ -1,4 +1,4 @@
-                                                     ###指纹验证(Fingerprint)使用说明
+### 指纹验证(Fingerprint)使用说明
 [![](https://jitpack.io/v/ShaoqiangPei/Fingerprint.svg)](https://jitpack.io/#ShaoqiangPei/Fingerprint)
 
 此库是一个指纹验证库，方便大家调用涉及到指纹解锁功能时使用
@@ -8,7 +8,7 @@
 ![3.png](https://upload-images.jianshu.io/upload_images/6127340-34f714e55b34ad02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![4.png](https://upload-images.jianshu.io/upload_images/6127340-473089243c2f78ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-####一.依赖
+#### 一.依赖
 Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
@@ -24,7 +24,7 @@ Add the dependency
 	        implementation 'com.github.ShaoqiangPei:Fingerprint:v1.0.3'//自己用的时候以最新版本为基准，此处仅作用例
 	}
 ```
-####二.直接引用指纹验证功能，不需要界面的使用介绍
+#### 二.直接引用指纹验证功能，不需要界面的使用介绍
 初始化
 ```
 Fingerprint.getInstance().init(Context context);//context 为activity上下文
@@ -78,7 +78,7 @@ Fingerprint.getInstance().callFingerPrint(new Fingerprint.OnCallBackListenr() {
         //销毁指纹识别
         Fingerprint.getInstance().cancel();
 ```
-####三.涉及到界面跳转的指纹识别
+#### 三.涉及到界面跳转的指纹识别
 很多时候，我们只需要一个固定的指纹识别功能，当然，最好这个识别功能还自带界面，我们只需要稍稍调用就享受到它的好处就好了，
 那么此库也提供了包含界面的指纹是被调用。
 第一步，我们需要在自己项目中的 androidMainfast.xml中 注册此activity，如下：
